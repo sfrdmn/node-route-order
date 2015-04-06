@@ -1,6 +1,6 @@
 {
   "name": "route-sort",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Sort common router patterns by specificity.",
   "main": "index.js",
   "scripts": {
@@ -27,8 +27,5 @@
   "devDependencies": {
     "tap-spec": "^3.0.0",
     "tape": "^4.0.0"
-  },
-  "dependencies": {
-    "lodash.isobject": "^3.0.1"
   }
 }
