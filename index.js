@@ -31,9 +31,8 @@ function createSpecificityComparator(options) {
       if (depthA === depthB) {
         var weightA = freeVariableWeight(slicedA)
         var weightB = freeVariableWeight(slicedB)
-        // More free variables and/or free variables closer
-        // to root == more generic route
-        return na ? weightA > weightB : weightA < weightB
+        // Greater weight == more specific route
+        return na ? weightA < weightB : weightA > weightB
       } else {
         // Greater depth == more specific route
         return na ? depthA < depthB : depthA > depthB
@@ -49,12 +48,15 @@ function createSpecificityComparator(options) {
  * Intuitively: when a free variable is at the base of a path e.g.
  * '/:resource', this is more generic than '/resourceName/:id' and thus has
  * a lower weight
+ *
+ * Weight can only be used to compare paths of the same depth
  */
 function freeVariableWeight(sliced) {
   return sliced.reduce(function(acc, part, i) {
-    if (/^:.+$/.test(part)) {
-      // Weight is positively correlated to index
-      acc += i + 1
+    // If is bound part
+    if (!/^:.+$/.test(part)) {
+      // Weight is positively correlated to indexes of bound parts
+      acc += Math.pow(i + 1, sliced.length)
     }
     return acc
   }, 0)
