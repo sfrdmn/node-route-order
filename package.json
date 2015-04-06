@@ -1,0 +1,31 @@
+{
+  "name": "route-sort",
+  "version": "1.0.0",
+  "description": "Sort common router patterns by specificity.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js",
+    "test-local": "tape test/*.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sfrdmn/node-route-sort"
+  },
+  "keywords": [
+    "express",
+    "route",
+    "sort",
+    "specificity",
+    "order"
+  ],
+  "author": "Sean Fridman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfrdmn/node-route-sort/issues"
+  },
+  "homepage": "https://github.com/sfrdmn/node-route-sort",
+  "devDependencies": {
+    "tap-spec": "^3.0.0",
+    "tape": "^4.0.0"
+  }
+}
