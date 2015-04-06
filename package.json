@@ -1,5 +1,5 @@
 {
-  "name": "route-sort",
+  "name": "route-order",
   "version": "0.1.0",
   "description": "Sort common router patterns by specificity.",
   "main": "index.js",
