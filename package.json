@@ -27,5 +27,8 @@
   "devDependencies": {
     "tap-spec": "^3.0.0",
     "tape": "^4.0.0"
+  },
+  "dependencies": {
+    "lodash.isobject": "^3.0.1"
   }
 }
