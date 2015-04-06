@@ -1,5 +1,7 @@
 # route-sort
 
+[![build status](https://secure.travis-ci.org/sfrdmn/node-route-order.png)](http://travis-ci.org/sfrdmn/node-route-order)
+
 Comparator to compare URI route patterns by specificity.
 
 Useful for Express apps, for example, to make sure more specific route
